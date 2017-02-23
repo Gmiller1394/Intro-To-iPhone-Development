@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Miller_UnitConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKn-bH-IXN">
+                                <rect key="frame" x="171" y="56" width="133" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dNE-eY-RbB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="HOb-JK-73v"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an Amount" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aYJ-OA-Fgn">
+                                <rect key="frame" x="16" y="40" width="147" height="30"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNf-DO-0Oh">
+                                <rect key="frame" x="210" y="40" width="55" height="30"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" red="0.90588235289999997" green="0.021417912769999999" blue="0.0062288802530000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnConvert" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mhr-L3-aR7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bN-Lm-hdh">
+                                <rect key="frame" x="16" y="258" width="288" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Hl-Xc-yrh">
+                                <rect key="frame" x="16" y="56" width="133" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LqH-Om-YYq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="z2F-Qi-d1E"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dKn-bH-IXN" firstAttribute="leading" secondItem="2Hl-Xc-yrh" secondAttribute="trailing" constant="8" id="4bS-Y9-g3N"/>
+                            <constraint firstItem="dKn-bH-IXN" firstAttribute="leading" secondItem="aYJ-OA-Fgn" secondAttribute="trailing" constant="8" id="5p9-sF-mOG"/>
+                            <constraint firstItem="2Hl-Xc-yrh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="66f-RD-4lS"/>
+                            <constraint firstItem="dKn-bH-IXN" firstAttribute="leading" secondItem="aYJ-OA-Fgn" secondAttribute="trailing" constant="8" id="9qG-wV-d1g"/>
+                            <constraint firstItem="6bN-Lm-hdh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Cxx-YS-Abp"/>
+                            <constraint firstItem="dKn-bH-IXN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Mcg-dt-NgJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RNf-DO-0Oh" secondAttribute="trailing" constant="39" id="Mdk-hI-adf"/>
+                            <constraint firstItem="aYJ-OA-Fgn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ovw-O1-lEs"/>
+                            <constraint firstItem="6bN-Lm-hdh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="V2B-7B-IMv"/>
+                            <constraint firstItem="RNf-DO-0Oh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Yz2-bN-SNt"/>
+                            <constraint firstItem="aYJ-OA-Fgn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="yRx-1f-OYP"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="lblResult" destination="6bN-Lm-hdh" id="cHB-m6-6ks"/>
+                        <outlet property="pvUnitFrom" destination="2Hl-Xc-yrh" id="pp6-YR-5RT"/>
+                        <outlet property="pvUnitTo" destination="dKn-bH-IXN" id="lXL-79-xmc"/>
+                        <outlet property="txtAmount" destination="aYJ-OA-Fgn" id="JUE-ak-toj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="406"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
