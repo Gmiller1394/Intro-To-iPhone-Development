@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Miller_Color_Palette" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ATb-tx-aym"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wzh-tH-HLV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yW8-Lv-S02">
+                                <rect key="frame" x="101" y="110" width="398" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.90588235289999997" green="0.021417912769999999" blue="0.0062288802530000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xt9-58-Egh"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qd-CT-IGa">
+                                <rect key="frame" x="150" y="229" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78048058712121215" green="0.78048058712121215" blue="0.78048058712121215" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="yW8-Lv-S02" secondAttribute="trailing" constant="87" id="3tf-kc-mfv"/>
+                            <constraint firstItem="yW8-Lv-S02" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="GR5-Cg-EdX"/>
+                            <constraint firstItem="Wzh-tH-HLV" firstAttribute="top" secondItem="5qd-CT-IGa" secondAttribute="bottom" constant="71" id="GSF-Ea-Zbx"/>
+                            <constraint firstItem="5qd-CT-IGa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Jam-HV-rGc"/>
+                            <constraint firstItem="yW8-Lv-S02" firstAttribute="top" secondItem="ATb-tx-aym" secondAttribute="bottom" constant="91" id="KJC-0N-QkO"/>
+                            <constraint firstItem="yW8-Lv-S02" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="W0g-9X-hO1"/>
+                            <constraint firstItem="yW8-Lv-S02" firstAttribute="top" secondItem="ATb-tx-aym" secondAttribute="bottom" constant="88" id="WPi-zJ-iye"/>
+                            <constraint firstItem="5qd-CT-IGa" firstAttribute="top" secondItem="yW8-Lv-S02" secondAttribute="bottom" constant="89" id="aaO-Ha-rwc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5qd-CT-IGa" secondAttribute="trailing" constant="50" id="cbU-ho-Hwr"/>
+                            <constraint firstItem="yW8-Lv-S02" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hcX-S8-pyU"/>
+                            <constraint firstItem="Wzh-tH-HLV" firstAttribute="top" secondItem="yW8-Lv-S02" secondAttribute="bottom" constant="462" id="rTp-CE-QwY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorCanvas" destination="5qd-CT-IGa" id="bLo-y3-69j"/>
+                        <outlet property="sliderRed" destination="yW8-Lv-S02" id="BfG-ht-qA4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="429"/>
+        </scene>
+    </scenes>
+</document>
